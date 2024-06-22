@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
+  "homepage": "https://yourusername.github.io/px-ecomerce-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -25,5 +26,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.23.1",
     "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
