@@ -1,0 +1,431 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(58, 57, 57);
+  color: white;
+}
+
+.pageNotFound {
+  height: 100vh !important;
+}
+.p404 {
+  color: beige;
+}
+
+.relative:hover #dropdown {
+  display: block;
+}
+
+.container {
+  display: grid;
+  gap: 16px; /* Space between cards */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  padding: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.product-card {
+  width: auto;
+  max-height: fit-content; /* Ensure product card fills the grid cell */
+}
+
+.product-card h3 {
+  font-size: 1.2em;
+  margin: 16px 0;
+}
+
+.product-card p {
+  padding: 0 16px;
+  flex-grow: 1; /* Allows text to grow within available space */
+}
+
+.product-card button {
+  margin: 16px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 484px) {
+  .login-form {
+    max-width: 50%;
+  }
+  .register-form {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .adminHeading {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .adminHeading {
+    display: none;
+  }
+}
+@media screen and (max-width: 460px) {
+  .card-mobile {
+    flex-direction: column;
+  }
+  .card-btn {
+    margin-top: 6%;
+  }
+}
+
+/* @media screen and (min-width: 1216px) {
+  .main {
+    margin-top: 6%;
+  }
+} */
+
+/*  Admin css  */
+.admin-left-panel,
+.user-left-panel {
+  width: 30vw;
+  /* height: 100%; */
+  position: absolute;
+  background-color: #002349;
+  z-index: 2;
+}
+.admin-right-panel,
+.user-right-panel {
+  width: 100%;
+
+  /* width: 80vw; */
+}
+.admin-left-panel h1 {
+  font-size: 2rex;
+}
+.admin-left-panel div a {
+  font-size: 2rex;
+}
+.admin-panel-btn {
+  font-size: 80%;
+  padding: 6%;
+}
+
+/* Product page */
+
+.show-products {
+  justify-content: space-around;
+  height: 50vh;
+}
+/* @media screen and (max-width: 600px) {
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+} */
+
+/* Update Category toggle modal */
+
+/* Modal container */
+#crud-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000; /* Adjust the z-index as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background overlay */
+#crud-modal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: -1; /* Put behind the modal content */
+}
+
+/* Modal content */
+#crud-modal .modal-content {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  z-index: 1001; /* Ensure this is above the overlay */
+}
+
+/* Close button */
+#crud-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+  z-index: 1002; /* Higher than modal content */
+}
+
+/* about */
+
+.about-img {
+  width: 20vw;
+}
+.about-container {
+  /* background-color: #021b36; */
+  height: 100%;
+}
+.about {
+  height: 60vh;
+  background-color: #002349;
+  border-radius: 10px;
+  box-shadow: #007bff;
+}
+
+/* contact us */
+.left-side-contact {
+  margin-top: 10%;
+}
+.contact {
+  justify-content: center;
+}
+.contact-form {
+  background-color: #002349;
+  border: 2px solid rgba(128, 128, 128, 0.37);
+}
+
+@media screen and (max-width: 760px) {
+  .about-img {
+    display: none;
+  }
+  .about-text {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .contact-box div div label {
+    font-size: 12px;
+    margin-bottom: 1px;
+  }
+  .contact-box div div input {
+    font-size: 10px;
+    padding: 1px;
+    /* margin-bottom: 1px; */
+  }
+  .contact-box div div textarea {
+    font-size: 10px;
+    padding: 1px;
+    row-gap: 2;
+    /* margin-bottom: 1px; */
+  }
+  .contact-form div h3 {
+    font-size: 12px;
+  }
+  .contact-form div {
+    padding: 4px;
+  }
+  .contact-form {
+    height: 32vh;
+  }
+  .contact-box div {
+    margin-bottom: 1px;
+  }
+  .contact-box button {
+    padding: 2px 10px 4px 10px;
+    font-size: 10px;
+  }
+  .contact-box {
+    padding: 6px;
+    font-size: 10px;
+  }
+
+  .contact-container div h1 {
+    font-size: 16px;
+    padding: 2px;
+    margin: 0px;
+  }
+
+  .contact-container {
+    padding-top: 40px;
+  }
+  .about {
+    padding: 2px;
+  }
+  .contact {
+    flex-direction: column;
+  }
+  .left-side-contact {
+    display: block;
+  }
+  .left-side-contact p {
+    word-wrap: break-word;
+    margin: 2px;
+    padding: 2px;
+    font-size: 12px;
+  }
+  .bottom-contact {
+    margin-left: 2px;
+    width: 80%;
+    margin: auto;
+    height: 200px;
+  }
+  .footer {
+    height: 100px;
+  }
+  .footer div {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .footer div span {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 10px;
+  }
+  .footer div div a span {
+    font-size: 10px;
+  }
+  .footer div div ul {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-height: 840px) {
+  .about {
+    height: 66vh;
+  }
+  .contact-form {
+    height: 100%;
+  }
+  .bottom-contact {
+    height: 100%;
+  }
+  .contact {
+    height: 90%;
+  }
+}
+
+/* Home page Scroll bar */
+
+/* Custom Scrollbar Styling for WebKit Browsers */
+.show-products::-webkit-scrollbar {
+  width: 10px; /* Width of the vertical scrollbar */
+  height: 10px; /* Height of the horizontal scrollbar */
+}
+
+.show-products::-webkit-scrollbar-track {
+  background: #e8e8e8; /* Track color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.show-products::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid #e8e8e8; /* Padding around scrollbar thumb */
+}
+
+/* Hover effect for the scrollbar thumb */
+.show-products::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+/* Smooth Scrolling */
+.show-products {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Styling the scroll container */
+.show-products {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow inside the container */
+  border: 1px solid #ddd; /* Light border around the container */
+  border-radius: 10px; /* Rounded corners for the container */
+}
+
+/* Adjusting padding and margin for better spacing */
+.show-products > * {
+  margin: 10px; /* Space between products */
+}
+
+/* home page left panel */
+
+/* @media screen and (max-width: 1100px) { */
+.move-left {
+  transition: transform 0.5s ease-in-out; /* Transition for smooth movement */
+}
+
+.move-left.moved {
+  /* transform: translateX(-20vw); Move 20vw to the left */
+  display: none;
+}
+
+.transition-button {
+  margin-bottom: 20px; /* Just to separate the button from the element */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 3;
+  margin-left: 10px;
+}
+
+.transition-button:hover {
+  background-color: #0056b3;
+}
+/* } */
+
+@media screen and (max-width: 840px) {
+  .transition-button {
+    margin-top: 30px;
+  }
+  .user-left-panel,
+  .admin-left-panel {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 730px) {
+  .transition-button {
+    margin-top: 10px;
+  }
+  .user-left-panel,
+  .admin-left-panel {
+    padding-top: 10px;
+  }
+}
